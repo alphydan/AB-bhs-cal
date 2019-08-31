@@ -375,11 +375,16 @@ def add_lesson_details(canvas, full_schedule_by_year, all_weeks):
                                                  'ON LEAVE')
                                 c.setFont("Helvetica", 10)
 
-
-
-                            # day of the month left of the boxes:
                             c.drawString(left_margin-1.2*cm,
-                                height-top_margin-0.5*cm-box_unit_height*(add_day+0.5),
+                            height-top_margin-0.5*cm-box_unit_height*(add_day+0.5),
+                                aday[1].date.strftime("%d"))
+
+
+
+                        # day of the month left of the boxes:
+                    else:
+                        c.drawString(left_margin-1.2*cm,
+                            height-top_margin-0.5*cm-box_unit_height*(add_day+0.5),
                                 aday[1].date.strftime("%d"))
 
                             # day number left of the boxes:
