@@ -11,6 +11,7 @@ from new_schedule_times import reg, l1, l2, l3, l4, l5, lunch, \
                                plus_a_registration, plus_a_lunch, \
                                plus_an_hour, plus_half_an_hour, \
                                plus_a_lesson, plus_half_a_day, \
+                               timetable_name,\
                                plus_a_working_day, timetable_path_n_file
 
 

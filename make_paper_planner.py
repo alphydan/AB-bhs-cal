@@ -12,7 +12,8 @@ from paper_planner_functions import total_weekly_lessons, \
                           how_many_different_classes, clean_list_u_classes, \
                           timetable_dict
 
-from import_fun_and_stats import short_statistics
+from import_fun_and_stats import short_statistics, timetable_name
+
 
 
 
@@ -496,7 +497,7 @@ left_margin = 0.8*inch # 1.2*inch
 right_margin = 0.68*inch
 bottom_margin = 0.45*inch
 
-c = canvas.Canvas("BHS_Paper_Planner.pdf", pagesize=letter)
+c = canvas.Canvas("output/" + timetable_name + ".pdf", pagesize=letter)
 c.setAuthor("Alvaro Feito Boirac")
 
 add_lesson_details(c, full_schedule_by_year, all_weeks)
