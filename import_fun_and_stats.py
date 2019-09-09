@@ -112,8 +112,10 @@ def add_teaching_day(ical, a_day, timetable_dict):
     '''
     day_data = a_day[1]
     day_nr_event = Event()
-    day_nr_event.add('summary', 'Week %s - Nr %s' % (day_data.week, day_data.week_nr))
-
+    if day_data.week_nr:
+        day_nr_event.add('summary', 'Week %s - Nr %s' % (day_data.week, day_data.week_nr))
+    else:
+        day_nr_event.add('summary', 'Week %s' % day_data.week)
 
     stats_string = add_statistics_string(day_data, timetable_dict)
     day_nr_event.add('description', stats_string)
